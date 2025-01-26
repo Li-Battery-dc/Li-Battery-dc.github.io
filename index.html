@@ -20,8 +20,9 @@ title: "我的个人网站"
     <div>
         {% for page in site.pages %}
             {% if page.path contains '_pages' and page.extname == '.md' %}
-                <h2>{{ page.title }}</h2>
-                <div>{{ page.content | markdownify }}</div>
+                <li>
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                </li>
             {% endif %}
         {% endfor %}
     </div>
