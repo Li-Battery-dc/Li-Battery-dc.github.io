@@ -16,11 +16,12 @@ title: "我的个人网站"
     <p>我是Li-Battrey，这是我的个人网站。 </p>
     <p>很高兴你来到这里</p>
 
-    <p>欢迎查看我的马原笔记：</p>
+    <h2>欢迎查看我的马原笔记：</h2>
     <div>
         {% for page in site.pages %}
             {% if page.path contains '_pages' and page.extname == '.md' %}
-                <a href="{{ page.url }}">{{ page.title }}</a><br>
+                <h2>{{ page.title }}</h2>
+                <div>{{ page.content | markdownify }}</div>
             {% endif %}
         {% endfor %}
     </div>
