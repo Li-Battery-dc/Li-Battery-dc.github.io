@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "欢迎来到我的个人网站"
+title: ""
 ---
 
 <!DOCTYPE html>
@@ -19,7 +19,17 @@ title: "欢迎来到我的个人网站"
     <p>欢迎查看我的 Markdown 文档：</p>
     <div>
         <!-- 这里直接链接到 Markdown 文件，GitHub 会自动渲染 -->
-        <a href="document/马原4.md">马原4：当代的马克思主义</a>
+        <a href="document/Max-4.md">马原4：当代的马克思主义</a>
     </div>
+
+    <h2>latest posts</h2>
+    <ul>
+        {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
