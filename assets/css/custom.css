@@ -1,3 +1,15 @@
+h1 {
+  font-size: 2rem; /* 字体大小 */
+  font-weight: bold; /* 字体粗细 */
+  font-family: 'Arial', sans-serif; /* 字体类型 */
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6; /* 行高 */
+  text-align: justify; /* 文本两端对齐 */
+}
+
 .bg-light {
   background-color: #898484; /* 浅灰色 */
 }
@@ -50,8 +62,8 @@
 }
 
 .post-image {
-  width: 100%;
-  height: 200px;
+  width: 20%;
+  height: 150px;
   object-fit: cover;
 }
 
