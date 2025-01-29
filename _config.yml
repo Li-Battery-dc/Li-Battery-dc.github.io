@@ -1,6 +1,0 @@
-title: 我的个人网站
-description: 这是我的个人网站，记录我的学习和项目。
-url: https://li-battery-dc.github.io  # 你自己的 URL 地址
-baseurl: ""  # 站点根目录路径，通常不需要修改
-
-theme: jekyll-theme-cayman  # 使用 GitHub 提供的主题之一
