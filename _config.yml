@@ -8,7 +8,7 @@ theme: minima                       # 选择主题为 Minima
 theme_dir: _themes/minima            # 如果使用自定义的 Minima 主题路径
 
 # 添加自定义 CSS
-css: asserts/css/custom.css
+css: assets/css/custom.css
 
 # Social links (optional)
 social_links:

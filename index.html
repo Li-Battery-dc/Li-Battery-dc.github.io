@@ -1,6 +1,5 @@
 ---
-layout: home
-title: Welcome to My site 
+layout: default
 ---
 
 <!DOCTYPE html>
@@ -9,7 +8,6 @@ title: Welcome to My site
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的个人网站</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -36,7 +34,7 @@ title: Welcome to My site
                     {% if post.image %}
                     <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
                     {% else %}
-                    <img src="/asserts/images/default-image.jpg" alt="{{ post.title }}" class="post-image">
+                    <img src="/assets/images/default-image.jpg" alt="{{ post.title }}" class="post-image">
                     {% endif %}
                     <div class="post-details">
                     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
