@@ -26,24 +26,26 @@ title: Welcome to My site
         <section id = "about">
             <h2>关于我</h2>
             <p>大家好，我是Li-Battery，欢迎来到我的个人网站</p>
-            <a href="mailto: liu-dc23@mails.tsinghua.edu.cn">emali</a>
+            <a href="mailto: liu-dc23@mails.tsinghua.edu.cn">emali me</a>
         </section>
 
         <section id = "blog">
-            <h2>我的一些日志</h2>
-            <ul>
-                {% for post in site.posts %}
-                <li>
-                    <a href = "{{ post.url }}">{{ post.title }}</a>
-                    <p>{{ post.excerpt }}</p>
-                </li>
+            <div class="blog-cards">
+                {% for post in site.posts limit:6 %}
+                  <div class="blog-card">
+                    {% if post.image %}
+                      <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+                    {% else %}
+                      <img src="/assets/images/default-image.jpg" alt="{{ post.title }}" class="post-image">
+                    {% endif %}
+                    <div class="post-details">
+                      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                      <p>{{ post.excerpt | default: "No description available."}}</p>
+                    </div>
+                  </div>
                 {% endfor %}
-            </ul>
+              </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2023 我的个人网站</p>
-    </footer>
 </body>
 </html>

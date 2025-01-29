@@ -7,6 +7,9 @@ url: "https://li-battery-dc.github.io"  # 网站的 URL，GitHub Pages 会自动
 theme: minima                       # 选择主题为 Minima
 theme_dir: _themes/minima            # 如果使用自定义的 Minima 主题路径
 
+# 添加自定义 CSS
+css: assets/css/custom.css
+
 # Social links (optional)
 social_links:
   - name: "email"
