@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 
 <!DOCTYPE html>
@@ -8,43 +8,34 @@ layout: default
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的个人网站</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <header>
         <h1>欢迎来到我的个人网站</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#blog">博客</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id = "about">
-            <h2>关于我</h2>
-            <p>大家好，我是Li-Battery，欢迎来到我的个人网站</p>
-            <a href="mailto: liu-dc23@mails.tsinghua.edu.cn">emali me</a>
-        </section>
+        <h2>关于我</h2>
+        <p>大家好，我是Li-Battery，欢迎来到我的个人网站</p>
+        <a href="mailto: liu-dc23@mails.tsinghua.edu.cn">emali me</a>
 
-        <section id = "blog">
-            <h2>博客</h2>
-                <div class="blog-cards">
-                    {% for post in site.posts limit:6 %}
-                    <div class="blog-card">
-                        {% if post.image %}
-                        <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
-                        {% else %}
-                        <img src="/assets/images/default-image.jpg" alt="{{ post.title }}" class="post-image">
-                        {% endif %}
-                        <div class="post-details">
-                        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                        <p>{{ post.excerpt | default: "No description available."}}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
+        <h2>博客</h2>
+        <div class="blog-cards">
+            {% for post in site.posts limit:6 %}
+            <div class="blog-card">
+                {% if post.image %}
+                <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+                {% else %}
+                <img src="/assets/images/default-image.jpg" alt="{{ post.title }}" class="post-image">
+                {% endif %}
+                <div class="post-details">
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <p>{{ post.excerpt | default: "No description available."}}</p>
                 </div>
-        </section>
+            </div>
+            {% endfor %}
+        </div>
     </main>
 </body>
 </html>
