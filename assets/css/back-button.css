@@ -1,0 +1,20 @@
+.back-button {
+    position: fixed; /* 固定位置 */
+    bottom: 0px; /* 距离底部20px */
+    right: 0px; /* 距离右侧20px */
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

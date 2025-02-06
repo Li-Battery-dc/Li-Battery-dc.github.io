@@ -6,6 +6,7 @@ h1 {
 
 p {
   font-size: 20px;
+  color: #383837;
   line-height: 1.6; /* 行高 */
   text-align: justify; /* 文本两端对齐 */
 }

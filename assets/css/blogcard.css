@@ -1,0 +1,62 @@
+/* 博客卡片的基础样式 */
+.blog-card {
+    width: 95%;
+    max-width: 650px;
+    max-height: 150px;
+    margin: 20px;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 卡片内链接的样式 */
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* 保持原有颜色 */
+}
+
+/* 卡片内容 */
+.blog-card-content {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 博客图片样式 */
+.blog-card-image {
+    width: 40%;
+    height: 200px;
+    object-fit: cover; /* 保证图片填满卡片区域并裁剪 */
+    border-bottom: 2px solid #eee;
+}
+
+/* 博客简介文本区域 */
+.blog-card-text {
+    width: 60%;
+    padding: 15px;
+}
+
+/* 标题样式 */
+.blog-card-text h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* 简介文本样式 */
+.blog-card-text p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* 悬浮效果 */
+.blog-card:hover {
+    transform: translateY(-5px); /* 向上漂浮 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+}
+
+.blog-card:hover .blog-card-text h3 {
+    color: #3a6986; /* 悬浮时标题变色 */
+}
