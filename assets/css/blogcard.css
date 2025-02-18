@@ -1,8 +1,7 @@
 /* 博客卡片的基础样式 */
 .blog-card {
-    width: 95%;
-    max-width: 650px;
-    max-height: 150px;
+    width: 90%;
+    height: 180px;
     margin: 20px;
     border-radius: 7px;
     overflow: hidden;
@@ -23,19 +22,23 @@
 .blog-card-content {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 /* 博客图片样式 */
 .blog-card-image {
-    width: 250px;
-    height: 200px;
+    width: 30%;
+    height: 100%;
+    /* max-width: 800px; */
+    /* max-height: 300px; */
     object-fit: cover; /* 保证图片填满卡片区域并裁剪 */
+    object-position: center; /* 图片居中 */
     border-bottom: 2px solid #eee;
 }
 
 /* 博客简介文本区域 */
 .blog-card-text {
-    width: 60%;
+    width: 70%;
     padding: 15px;
 }
 
