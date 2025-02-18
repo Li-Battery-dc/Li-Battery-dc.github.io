@@ -27,7 +27,7 @@
 
 /* 博客图片样式 */
 .blog-card-image {
-    width: 40%;
+    width: 250px;
     height: 200px;
     object-fit: cover; /* 保证图片填满卡片区域并裁剪 */
     border-bottom: 2px solid #eee;
