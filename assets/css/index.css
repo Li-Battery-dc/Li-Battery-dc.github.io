@@ -5,15 +5,16 @@ body {
     color: #333;
     display: flex;
     flex-direction: center;
-    align-items: center;
+    align-items: flex-start; /* 改为flex-start避免居中布局的跳动 */
     min-height: 100vh;
     position: relative; /* 让子元素可以绝对定位 */
     z-index: 1;
+    overflow-x: hidden; /* 防止横向滚动条 */
 }
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed; /* 改为fixed确保背景图固定 */
     top: 0;
     left: 0;
     width: 100%;
@@ -21,8 +22,9 @@ body::before {
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-position: center center;
-    opacity: 0.4; 
-    z-index: -1; 
+    background-attachment: fixed; /* 固定背景附着 */
+    opacity: 0.4;
+    z-index: -1;
 }
 
 .navbar {
@@ -56,7 +58,146 @@ body::before {
     box-sizing: border-box;
     min-height: 90vh;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 20px auto; /* 添加上下边距，避免紧贴顶部 */
+    display: flex;
+    gap: 20px;
+    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* 添加平滑高度过渡 */
+    position: relative;
+}
+
+/* 左侧个人信息区域 */
+.sidebar-section {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 头像容器 */
+.avatar-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.avatar-image:hover {
+    transform: scale(1.05);
+}
+
+.avatar-info h3 {
+    margin: 10px 0 5px 0;
+    color: #333;
+    font-size: 20px;
+    font-family: "Simsun", serif;
+}
+
+.avatar-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* 信息容器 */
+.info-container, .contact-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-container:hover, .contact-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-container h3, .contact-container h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 18px;
+    font-family: "Simsun", serif;
+    border-bottom: 2px solid #87CEEB;
+    padding-bottom: 8px;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-content p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: rgba(135, 206, 235, 0.1);
+    border-radius: 8px;
+    color: #2e6061;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: rgba(135, 206, 235, 0.2);
+    color: #5fc3c5;
+    transform: translateX(5px);
+}
+
+.email-icon {
+    font-size: 16px;
+}
+
+/* 右侧内容区域 */
+.content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* 防止flex item溢出 */
+}
+
+.articles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 header {
@@ -91,14 +232,19 @@ nav {
     display: flex;
 }
 
-.nav-button {
-    font-size: 22px;
+.nav-button, .toggle-button {
+    font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 8px 15px;
+    background-color: #ffffff;
+    color: #2e6061;
+    border: 2px solid #2e6061;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.nav-button:hover {
+.nav-button:hover, .toggle-button:hover {
     background-color: #f4f9f4;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -142,4 +288,75 @@ a:hover {
 
 p {
     font-size: 20px;
+}
+
+/* 展开文章区域的样式 */
+.additional-articles {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.4s ease-in-out,
+                margin 0.4s ease-in-out;
+    will-change: max-height, opacity; /* 优化动画性能 */
+    transform: translateZ(0); /* 启用硬件加速 */
+}
+
+.additional-articles.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+/* 卡片逐个进入动画 */
+.additional-articles .blog-card {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: cardSlideIn 0.5s ease-out forwards;
+}
+
+.additional-articles.expanded .blog-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.additional-articles.expanded .blog-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.additional-articles.expanded .blog-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes cardSlideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 按钮居中样式 */
+.toggle-button {
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(135, 206, 235, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.toggle-button:active::before {
+    width: 300px;
+    height: 300px;
 }

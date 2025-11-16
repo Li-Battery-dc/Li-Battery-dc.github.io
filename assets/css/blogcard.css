@@ -1,7 +1,7 @@
-/* 博客卡片的基础样式 */
+/* 博客卡片的基础样式 - 水平布局 */
 .blog-card {
     width: 90%;
-    height: 180px;
+    height: 170px;
     margin: 20px;
     border-radius: 7px;
     overflow: hidden;
@@ -9,13 +9,14 @@
     display: flex;
     flex-direction: row;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* 卡片内链接的样式 */
 .card-link {
     display: block;
     text-decoration: none;
-    color: inherit; /* 保持原有颜色 */
+    color: inherit;
 }
 
 /* 卡片内容 */
@@ -27,39 +28,79 @@
 
 /* 博客图片样式 */
 .blog-card-image {
-    width: 30%;
-    /* height: 100%; */
-    /* max-width: 800px; */
-    /* max-height: 300px; */
-    object-fit: cover; /* 保证图片填满卡片区域并裁剪 */
-    object-position: center; /* 图片居中 */
-    border-bottom: 2px solid #eee;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-right: 2px solid #eee;
 }
 
 /* 博客简介文本区域 */
 .blog-card-text {
-    width: 70%;
+    width: 60%;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* 标题样式 */
 .blog-card-text h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
+    color: #333;
+    font-family: "Simsun", serif;
+    transition: color 0.3s ease;
 }
 
 /* 简介文本样式 */
 .blog-card-text p {
     font-size: 16px;
     color: #666;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* 悬浮效果 */
 .blog-card:hover {
-    transform: translateY(-5px); /* 向上漂浮 */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .blog-card:hover .blog-card-text h3 {
-    color: #3a6986; /* 悬浮时标题变色 */
+    color: #2e6061;
+}
+
+/* 文章页面容器样式 */
+.articles-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 文章页面头部 */
+.articles-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.articles-header h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.articles-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #87CEEB, #2e6061);
+    border-radius: 2px;
 }
