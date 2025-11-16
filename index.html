@@ -113,26 +113,32 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const additionalArticles = document.getElementById('additionalArticles');
-            const toggleButton = document.getElementById('toggleArticles');
+        window.onload = function() {
+            var additionalArticles = document.getElementById('additionalArticles');
+            var toggleButton = document.getElementById('toggleArticles');
 
             // 初始化状态：收起
-            additionalArticles.classList.remove('expanded');
-            toggleButton.textContent = '展开更多';
+            if (additionalArticles && toggleButton) {
+                additionalArticles.className = additionalArticles.className.replace('expanded', '');
+                toggleButton.innerHTML = '展开更多';
 
-            toggleButton.addEventListener('click', function() {
-                if (additionalArticles.classList.contains('expanded')) {
-                    // 收起动画
-                    additionalArticles.classList.remove('expanded');
-                    toggleButton.textContent = '展开更多';
-                } else {
-                    // 展开动画
-                    additionalArticles.classList.add('expanded');
-                    toggleButton.textContent = '收起';
-                }
-            });
-        });
+                toggleButton.onclick = function() {
+                    if (additionalArticles.className.indexOf('expanded') !== -1) {
+                        // 收起动画
+                        additionalArticles.className = additionalArticles.className.replace('expanded', '');
+                        toggleButton.innerHTML = '展开更多';
+                    } else {
+                        // 展开动画
+                        if (additionalArticles.className.length > 0) {
+                            additionalArticles.className += ' expanded';
+                        } else {
+                            additionalArticles.className = 'expanded';
+                        }
+                        toggleButton.innerHTML = '收起';
+                    }
+                };
+            }
+        };
     </script>
 </body>
 </html>
