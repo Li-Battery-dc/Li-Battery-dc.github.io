@@ -22,6 +22,9 @@ Hello! I'm Dongchen Liu. Welcome to my homepage. I'm a third-year undergraduate 
 
 My research interest includes machine learning and computer vision. (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
+<span class='anchor' id='educations'></span>
+# 📖 Educations
+- *2023 - now*, Department of Automation, Tsinghua University(Expected: Jun 2027)
 
 <span class='anchor' id='news'></span>
 # 🔥 News
@@ -47,10 +50,6 @@ Zhangkuan\*, **Dongchen Liu**\*, Qiyue Zhao,Jinkun Hou,Xinran Zhang,Qinlei Xie,M
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors and Awards
 - *2023-2025* Winning Comprehensive Excellence Scholarship, Tsinghua University in a row. 
-
-<span class='anchor' id='educations'></span>
-# 📖 Educations
-- *2023 - now*, Department of Automation, Tsinghua University(Expected: Jun 2027)
 
 <span class='anchor' id='projects'></span>
 # 🔨 Projects
