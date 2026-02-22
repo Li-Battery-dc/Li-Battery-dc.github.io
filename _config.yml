@@ -7,7 +7,9 @@
 
 # Site Settings
 title                    : "Dongchen Liu"
-description              : ""
+description              : "Undergraduate student in Department of Automation, Tsinghua University"
+url                      : "https://li-battery-dc.github.io"
+baseurl                  : ""
 repository               : "Li-Battery-dc.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -15,7 +17,7 @@ google_scholar_stats_use_cdn : true
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related
-google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
+google_site_verification :  1o0BpuDxdX0IAt3WFOZUv003TwAnl6lOrQ7asLl-PZo # get google_site_verification from https://search.google.com/search-console/about
 bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
@@ -23,7 +25,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Dongchen Liu"
   avatar           : "images/head.jpg"
-  bio              : "Undergraduate student in Department of Automation, Tsinghua University"
+  bio              : ""
   location         : "Beijing, China"
   employer         :
   pubmed           : 
@@ -31,7 +33,7 @@ author:
   openreview       : # e.g., "https://openreview.net/profile?id=~Your_Name1"
   email            : "liu-dc23@mails.tsinghua.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  uri              : "https://li-battery-dc.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
