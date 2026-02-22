@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Li-Battery-dc</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/blogcard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧个人信息区域 -->
+        <div class="sidebar-section">
+            <!-- 头像区域 -->
+            <div class="avatar-container">
+                <img src="assets/images/header-img.jpg" alt="个人头像" class="avatar-image">
+                <div class="avatar-info">
+                    <h3>Li-Battery</h3>
+                    <p>个人博客</p>
+                </div>
+            </div>
+
+            <!-- 关于我区域 -->
+            <div class="info-container">
+                <h3>关于我</h3>
+                <div class="info-content">
+                    <p>你好，我是Li-Battery, 这里会放一些我的随笔</p>
+                </div>
+            </div>
+
+            <!-- 联系我区域 -->
+            <div class="contact-container">
+                <h3>联系我</h3>
+                <div class="contact-content">
+                    <p>你可以通过以下方式联系我：</p>
+                    <a href="mailto: liu-dc23@mails.tsinghua.edu.cn" class="contact-link">
+                        <span class="email-icon">📧</span>
+                        <span>liu-dc23@mails.tsinghua.edu.cn</span>
+                    </a>
+                    <a href="mailto: liudc951@gmail.com" class="contact-link">
+                        <span class="email-icon">📧</span>
+                        <span>liudc951@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧文章列表区域 -->
+        <div class="content-section">
+            <header>
+                <h1>欢迎来到我的个人网站 😊</h1>
+            </header>
+
+            <main>
+                <div class="articles-header">
+                    <h2>最新文章</h2>
+                </div>
+
+                <div class="articles-grid">
+                    <article class="blog-card">
+                        <a href="articles/Paris/Paris.html" class="card-link">
+                            <div class="blog-card-content">
+                                <img src="assets/images/Paris.jpg" alt="Blog Image" class="blog-card-image">
+                                <div class="blog-card-text">
+                                    <h3>Walk in Paris</h3>
+                                    <p>记录在巴黎的奇妙想法</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <button class="toggle-button" id="toggleArticles">展开更多</button>
+
+                <div class="additional-articles" id="additionalArticles">
+                    <div class="articles-grid">
+                        <article class="blog-card">
+                            <a href="articles/NorthWest/NorthWest.html" class="card-link">
+                                <div class="blog-card-content">
+                                    <img src="assets/images/NorthWest.jpg" alt="Blog Image" class="blog-card-image">
+                                    <div class="blog-card-text">
+                                        <h3>西北行记</h3>
+                                        <p>记录西北之旅的所见所闻</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="blog-card">
+                            <a href="articles/chengdu/chengdu.html" class="card-link">
+                                <div class="blog-card-content">
+                                    <img src="assets/images/chengdu.jpg" alt="Blog Image" class="blog-card-image">
+                                    <div class="blog-card-text">
+                                        <h3>成都小记</h3>
+                                        <p>记录成都之旅的所见所闻，品味天府之国的悠闲生活</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="blog-card">
+                            <a href="markdown-articles/tech-share.html" class="card-link">
+                                <div class="blog-card-content">
+                                    <img src="assets/images/background.jpg" alt="Blog Image" class="blog-card-image">
+                                    <div class="blog-card-text">
+                                        <h3>【零基础】制作个人网站</h3>
+                                        <p>使用简单的HTML和CSS制作个人网站，轻松拥有自己的网络空间</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var additionalArticles = document.getElementById('additionalArticles');
+            var toggleButton = document.getElementById('toggleArticles');
+
+            // 初始化状态：收起
+            if (additionalArticles && toggleButton) {
+                additionalArticles.className = additionalArticles.className.replace('expanded', '');
+                toggleButton.innerHTML = '展开更多';
+
+                toggleButton.onclick = function() {
+                    if (additionalArticles.className.indexOf('expanded') !== -1) {
+                        // 收起动画
+                        additionalArticles.className = additionalArticles.className.replace('expanded', '');
+                        toggleButton.innerHTML = '展开更多';
+                    } else {
+                        // 展开动画
+                        if (additionalArticles.className.length > 0) {
+                            additionalArticles.className += ' expanded';
+                        } else {
+                            additionalArticles.className = 'expanded';
+                        }
+                        toggleButton.innerHTML = '收起';
+                    }
+                };
+            }
+        };
+    </script>
+</body>
+</html>

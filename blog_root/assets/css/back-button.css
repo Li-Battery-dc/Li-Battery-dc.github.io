@@ -1,0 +1,67 @@
+.back-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: "KaiTi", 楷体, serif;
+}
+
+.back-button::before {
+    content: "🏠";
+    font-size: 18px;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.5);
+    background-color: #2980b9;
+}
+
+.back-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+    background-color: #3498db;
+}
+
+/* 返回按钮响应式设计 */
+@media screen and (max-width: 768px) {
+    .back-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .back-button::before {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .back-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+    .back-button::before {
+        font-size: 14px;
+    }
+}

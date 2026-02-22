@@ -1,0 +1,572 @@
+body {
+    font-family: "Aptos", "Simsun", 宋体, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: center;
+    align-items: flex-start; /* 改为flex-start避免居中布局的跳动 */
+    min-height: 100vh;
+    position: relative; /* 让子元素可以绝对定位 */
+    z-index: 1;
+    overflow-x: hidden; /* 防止横向滚动条 */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* 改为fixed确保背景图固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background_2025.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* 固定背景附着 */
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* 移动设备背景优化 */
+@media screen and (max-width: 768px) {
+    body::before {
+        background-attachment: scroll; /* 移动设备使用scroll以提升性能 */
+        background-position: center top;
+    }
+}
+
+.navbar {
+    background: #2c3e50;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.container {
+    width: 1000px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    min-height: 90vh;
+    border-radius: 10px;
+    margin: 20px auto; /* 添加上下边距，避免紧贴顶部 */
+    display: flex;
+    gap: 20px;
+    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* 添加平滑高度过渡 */
+    position: relative;
+}
+
+/* 左侧个人信息区域 */
+.sidebar-section {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 头像容器 */
+.avatar-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.avatar-image:hover {
+    transform: scale(1.05);
+}
+
+.avatar-info h3 {
+    margin: 10px 0 5px 0;
+    color: #333;
+    font-size: 20px;
+    font-family: "Simsun", serif;
+}
+
+.avatar-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* 信息容器 */
+.info-container, .contact-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-container:hover, .contact-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-container h3, .contact-container h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 18px;
+    font-family: "Simsun", serif;
+    border-bottom: 2px solid #87CEEB;
+    padding-bottom: 8px;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-content p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: rgba(135, 206, 235, 0.1);
+    border-radius: 8px;
+    color: #2e6061;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: rgba(135, 206, 235, 0.2);
+    color: #5fc3c5;
+    transform: translateX(5px);
+}
+
+.email-icon {
+    font-size: 16px;
+}
+
+/* 右侧内容区域 */
+.content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* 防止flex item溢出 */
+}
+
+.articles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(10, 10, 10);
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 60px;
+}
+
+.header-text {
+    flex: 0.8;
+    font-family: "Simsun", serif;
+}
+
+.header-img {
+    width: 250px;
+    height: 60px;
+    border-radius: 0%;
+    overflow: hidden;
+}
+
+.header-img img {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-button, .toggle-button {
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: #ffffff;
+    color: #2e6061;
+    border: 2px solid #2e6061;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover, .toggle-button:hover {
+    background-color: #f4f9f4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer {
+    background-color: #f9f7f7;
+    color: rgb(34, 33, 33);
+    text-align: right;
+    padding: 3px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+h2 {
+    border-bottom: 2px solid #6f6f6f;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #2e6061;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #5fc3c5;;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* 展开文章区域的样式 */
+.additional-articles {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out,
+                opacity 0.4s ease-in-out,
+                margin 0.4s ease-in-out;
+}
+
+.additional-articles.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+/* 简化的卡片展开动画 */
+.additional-articles.expanded .blog-card {
+    opacity: 1;
+}
+
+/* 按钮居中样式 */
+.toggle-button {
+    display: block;
+    margin: 20px auto;
+}
+
+/* 响应式设计 - 平板和手机端适配 */
+@media screen and (max-width: 768px) {
+    /* 容器响应式调整 */
+    .container {
+        width: 95%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 15px;
+        flex-direction: column; /* 改为上下布局 */
+        gap: 20px;
+        margin: 10px auto;
+    }
+
+    /* 侧边栏区域响应式 */
+    .sidebar-section {
+        flex: none;
+        width: 100%;
+        flex-direction: row; /* 在手机上个人信息区域横向排列 */
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    /* 头像容器缩小 */
+    .avatar-container {
+        flex: 0 0 auto;
+        padding: 15px;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    .avatar-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .avatar-info h3 {
+        font-size: 18px;
+        margin: 5px 0 3px 0;
+    }
+
+    .avatar-info p {
+        font-size: 12px;
+    }
+
+    /* 信息容器响应式 */
+    .info-container, .contact-container {
+        flex: 1;
+        min-width: 200px;
+        padding: 15px;
+    }
+
+    .info-container h3, .contact-container h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    .info-content p {
+        font-size: 14px;
+    }
+
+    .contact-content p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .contact-link {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* 内容区域响应式 */
+    .content-section {
+        flex: 1;
+        width: 100%;
+    }
+
+    /* 文章头部响应式 */
+    .articles-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .articles-header h2 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    /* 文章网格响应式 */
+    .articles-grid {
+        grid-template-columns: 1fr; /* 单列布局 */
+        gap: 15px;
+    }
+
+    /* 博客卡片响应式 */
+    .blog-card {
+        margin-bottom: 0;
+    }
+
+    .blog-card-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .blog-card-image {
+        height: 150px;
+    }
+
+    .blog-card-text h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .blog-card-text p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* 按钮响应式 */
+    .toggle-button {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin: 15px auto;
+    }
+
+    /* 段落字体大小 */
+    p {
+        font-size: 16px;
+    }
+
+    /* 页眉响应式 */
+    header {
+        padding: 10px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header-text {
+        font-size: 18px;
+    }
+
+    .header-img {
+        height: 40px;
+        width: 200px;
+    }
+}
+
+/* 更小屏幕设备（小于480px）进一步优化 */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 98%;
+        padding: 10px;
+        margin: 5px auto;
+        gap: 15px;
+    }
+
+    .sidebar-section {
+        flex-direction: column; /* 在极小屏幕上改为纵向排列 */
+        gap: 10px;
+    }
+
+    .avatar-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .info-container, .contact-container {
+        width: 100%;
+        padding: 12px;
+        min-width: auto;
+    }
+
+    .avatar-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .avatar-info h3 {
+        font-size: 16px;
+    }
+
+    .avatar-info p {
+        font-size: 11px;
+    }
+
+    .info-container h3, .contact-container h3 {
+        font-size: 14px;
+    }
+
+    .info-content p {
+        font-size: 13px;
+    }
+
+    .contact-content p {
+        font-size: 11px;
+    }
+
+    .contact-link {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .articles-header h2 {
+        font-size: 20px;
+    }
+
+    .blog-card-text h3 {
+        font-size: 14px;
+    }
+
+    .blog-card-text p {
+        font-size: 12px;
+    }
+
+    .blog-card-image {
+        height: 120px;
+    }
+
+    .toggle-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .header-text {
+        font-size: 16px;
+    }
+
+    .header-img {
+        height: 30px;
+        width: 150px;
+    }
+}

@@ -1,0 +1,94 @@
+h1 {
+  font-size: 2rem; /* 字体大小 */
+  font-weight: bold; /* 字体粗细 */
+  font-family: 'Arial', sans-serif; /* 字体类型 */
+}
+
+p {
+  font-size: 20px;
+  color: #383837;
+  line-height: 1.6; /* 行高 */
+  text-align: justify; /* 文本两端对齐 */
+}
+
+.bg-light {
+  background-color: #898484; /* 浅灰色 */
+}
+
+.gradient {
+  background: linear-gradient(45deg, #cdcdcd, #383837);
+}
+
+.box {
+  border: 1px solid #ddd;
+  border-radius: 10px; /* 圆角 */
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 悬停效果 */
+.button:hover {
+  background-color: #2ecc71; /* 改变背景色 */
+  transform: scale(1.05); /* 放大 */
+}
+
+/* 设备适应 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 在小屏幕上改为垂直布局 */
+  }
+}
+
+
+/* 首页卡片布局 */
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+}
+
+.post-image {
+  width: 20%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.post-details {
+  padding: 15px;
+}
+
+.post-details h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.post-details p {
+  font-size: 1em;
+  color: #555;
+}
+
+.post-details a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.post-details a:hover {
+  color: #3498db;
+}
+  

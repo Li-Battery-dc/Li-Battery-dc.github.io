@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <link rel="stylesheet" href="../assets/css/markdown.css">
+    <link rel="stylesheet" href="../assets/css/back-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/vs2015.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script src="../assets/js/loadMarkdown.js"></script>
+</head>
+<body>
+    <div id = "content" class="container"></div>
+    <script>
+        loadMarkdown('./documents/技术分享.md', 'content');
+    </script>
+    <button class="back-button" onclick="window.location.href='../subpages/articles.html'">返回</button>
+</body>
+</html>
