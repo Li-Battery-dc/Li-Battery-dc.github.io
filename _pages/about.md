@@ -18,9 +18,10 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😀About Me
 
-Hello! I'm Dongchen Liu. Welcome to my homepage. I'm a third-year undergraduate student of Tsinghua University, currently seeking reasearch mentorship for future research! 
+Hello! I'm Dongchen Liu. I'm currently a third-year undergraduate student at Tsinghua University, majoring in Artificial Intelligence. 
 
-My research interest includes machine learning and computer vision. (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My research interest includes machine learning and computer vision. (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). 
+
 
 <span class='anchor' id='educations'></span>
 # 📖 Educations
@@ -33,33 +34,58 @@ My research interest includes machine learning and computer vision. (You can als
 <span class='anchor' id='publications'></span>
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/papers/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[GameVerse]()
-
-Zhangkuan\*, **Dongchen Liu**\*, Qiyue Zhao,Jinkun Hou,Xinran Zhang,Qinlei Xie,Miao Liu,Yiming Li<sup>†</sup>
-
-[**Project**]() <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-<!-- - Human gameplay is a visually grounded interaction loop in which players act, reflect on failures, and watch tutorials to refine strategies. Can Vision-Language Models (VLMs) also learn from video-based reflection?  We present \textbf{GameVerse}, a comprehensive video game benchmark that enables a \textit{reflective visual interaction loop}. Moving beyond traditional \textit{\textbf{fire-and-forget}} evaluations, it uses a novel \textit{\textbf{reflect-and-retry}} paradigm to assess how VLMs internalize visual experience and improve policies. To facilitate systematic and scalable evaluation, we also introduce a \textit{cognitive hierarchical taxonomy} spanning 15 globally popular games, \textit{dual action space} for both semantic and GUI control, and \textit{milestone evaluation} using advanced VLMs to quantify progress. Our experiments show that VLMs benefit from video-based reflection in varied settings, and perform best by combining failure trajectories and expert tutorials—a \textit{training-free} analogue to reinforcement learning (RL) plus supervised fine-tuning (SFT). -->
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">Arxiv</div>
+      <img src='images/papers/GameVerse.png' alt="GameVerse paper preview">
+    </div>
+  </div>
+  <div class='paper-box-text'>
+    <div class='publication-title'>GameVerse: Can Vision-Language Models Learn from Video-based Reflection?</div>
+    <div class='publication-authors'>
+      Zhangkuan*, <strong>Dongchen Liu</strong>*, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, Miao Liu<sup>†</sup>, Yiming Li<sup>†</sup>
+    </div>
+    <div class='publication-links'>
+      <a class='publication-btn' href=''>PDF</a>
+      <a class='publication-btn' href='https://github.com/Li-Battery-dc/GameVerse'>Code</a>
+      <a class='publication-btn' href='https://GameVerse-bench.github.io'>Project</a>
+    </div>
+    <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+  </div>
 </div>
-</div>
-
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors and Awards
-- *2023-2025* Winning Comprehensive Excellence Scholarship, Tsinghua University in a row. 
+
+## 2025
+
+- National Encouragement Scholarship
+- Comprehensive Excellence Scholarship, Tsinghua University. 
+
+## 2024
+
+- National Encouragement Scholarship
+- Comprehensive Excellence Scholarship, Tsinghua University. 
+
+## 2023
+
+- Runqian Huang Scholarship, Qujing No.1 Middle school.
 
 <span class='anchor' id='projects'></span>
 # 🔨 Projects
 
-## The 4th Tsinghua University Cyberdog Development Competition
+## Freshmen Creative Competition, Tsinghua University.
+
+- As the team leader, completed the two projects of "Guided Photography Assistant" and "Bicycle Parking Management System".
+- Awarded the 1st place of the large model track and the 2nd place of the campus optimization track respectively.
+
+## The 4th Tsinghua University Cyberdog Development Competition.
 
 - Implemented cooperative soccer offense/defense for two quadruped robots based on ROS 2.
 - Awarded Third Prize (ranked 8/19).
 
-## THUAI 7, Tsinghua University
+## THUAI 7, Tsinghua University.
 
 - Wrote the C++ codebase for an agent in a competitive game environment.
 - Awarded Second Prize (ranked 3/34).
