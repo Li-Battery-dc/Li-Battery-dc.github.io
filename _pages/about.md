@@ -44,7 +44,7 @@ My research interest includes machine learning and computer vision. (You can als
   <div class='paper-box-text'>
     <div class='publication-title'>GameVerse: Can Vision-Language Models Learn from Video-based Reflection?</div>
     <div class='publication-authors'>
-      Zhangkuan*, <strong>Dongchen Liu</strong>*, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, Miao Liu<sup>†</sup>, Yiming Li<sup>†</sup>
+      Zhangkuan*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, Miao Liu<sup>†</sup>, Yiming Li<sup>†</sup>
     </div>
     <div class='publication-links'>
       <a class='publication-btn' href=''>PDF</a>
