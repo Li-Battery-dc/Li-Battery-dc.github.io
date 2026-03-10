@@ -7,7 +7,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
 {% else %}
@@ -18,10 +17,9 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😀About Me
 
-Hello! I'm Dongchen Liu. I'm currently a third-year undergraduate student at Tsinghua University, majoring in Artificial Intelligence. 
+Hello! I'm Dongchen Liu. I'm currently a third-year undergraduate student at Tsinghua University, majoring in Artificial Intelligence.
 
-My research interest includes machine learning and computer vision. (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). 
-
+My research interest includes machine learning and computer vision. (You can also use google scholar badge `<a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations">``</a>`).
 
 <span class='anchor' id='educations'></span>
 # 📖 Educations
@@ -29,10 +27,10 @@ My research interest includes machine learning and computer vision. (You can als
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-- *2026.02*: &nbsp;🎉🎉 My first publication is coming soon...
+- *2026.03*:  🎉🎉 My first publication is on arxiv now!
 
 <span class='anchor' id='publications'></span>
-# 📝 Publications 
+# 📝 Publications
 
 <div class='paper-box'>
   <div class='paper-box-image'>
@@ -44,11 +42,11 @@ My research interest includes machine learning and computer vision. (You can als
   <div class='paper-box-text'>
     <div class='publication-title'>GameVerse: Can Vision-Language Models Learn from Video-based Reflection?</div>
     <div class='publication-authors'>
-      Zhangkuan*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, Miao Liu<sup>†</sup>, Yiming Li<sup>†</sup>
+      Kuan Zhang*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, Miao Liu<sup>†</sup>, Yiming Li<sup>†</sup>
     </div>
     <div class='publication-links'>
-      <a class='publication-btn' href=''>PDF</a>
-      <a class='publication-btn' href='https://github.com/Li-Battery-dc/GameVerse'>Code</a>
+      <a class='publication-btn' href='https://arxiv.org/abs/2603.06656'>PDF</a>
+      <a class='publication-btn' href='https://github.com/THUSI-Lab/GameVerse'>Code</a>
       <a class='publication-btn' href='https://GameVerse-bench.github.io'>Project</a>
     </div>
     <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
@@ -61,12 +59,12 @@ My research interest includes machine learning and computer vision. (You can als
 ## 2025
 
 - National Encouragement Scholarship
-- Comprehensive Excellence Scholarship, Tsinghua University. 
+- Comprehensive Excellence Scholarship, Tsinghua University.
 
 ## 2024
 
 - National Encouragement Scholarship
-- Comprehensive Excellence Scholarship, Tsinghua University. 
+- Comprehensive Excellence Scholarship, Tsinghua University.
 
 ## 2023
 
@@ -94,4 +92,3 @@ My research interest includes machine learning and computer vision. (You can als
 # 🤵 Society
 
 - Staff Member, Software Section, Student Association for Science and Technology, Department of Automation, Tsinghua University (2024–2025)
-
