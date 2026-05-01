@@ -19,7 +19,7 @@ redirect_from:
 
 Hello! I'm Dongchen Liu. I'm currently a third-year undergraduate student at Tsinghua University, majoring in Artificial Intelligence.
 
-My research interest includes machine learning and computer vision. (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My research interest includes spatial intelligence, machine learning and computer vision. (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
 <span class='anchor' id='educations'></span>
 # 📖 Educations
@@ -27,7 +27,7 @@ My research interest includes machine learning and computer vision. (You can als
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-- *2026.03*: &nbsp; 🎉🎉 My first publication is on arxiv now!
+- *2026.05*: &nbsp; 🎉🎉 My first publication is accepted by ICML 2026!
 
 <span class='anchor' id='publications'></span>
 # 📝 Publications
@@ -35,7 +35,7 @@ My research interest includes machine learning and computer vision. (You can als
 <div class='paper-box'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge">Arxiv</div>
+      <div class="badge">ICML 2026</div>
       <img src='images/papers/GameVerse.png' alt="GameVerse paper preview">
     </div>
   </div>
