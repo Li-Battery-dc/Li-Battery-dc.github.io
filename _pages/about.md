@@ -27,10 +27,31 @@ My research interest includes spatial intelligence, machine learning and compute
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-- *2026.05*: &nbsp; 🎉🎉 My first publication is accepted by ICML 2026!
+- *2026.05*: &nbsp; 🎉🎉 Our work on Large Foundation Models and Games is on arXiv now!
+- *2026.05*: &nbsp; 🎉🎉 My first publication GameVerse is accepted by ICML 2026!
 
 <span class='anchor' id='publications'></span>
 # 📝 Publications
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">arXiv</div>
+      <img src='images/papers/survey.png' alt="LFMs Meet games paper preview">
+    </div>
+  </div>
+  <div class='paper-box-text'>
+    <div class='publication-title'>Towards Generalist Game Players: An Investigation of Foundation Models in the Game Multiverse</div>
+    <div class='publication-authors'>
+      Kuan Zhang*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao*, Tianyu Xin*, Yue Su*, Haisheng Wang, Han Yin, Hongbo Ma, Peize Li, Tianjun Gu, Xiangnan Wu, Xinran Zhang, Yongxuan Li, Zirong Chen, Yiming Li<sup>†</sup>
+    </div>
+    <div class='publication-links'>
+      <a class='publication-btn' href='https://arxiv.org/abs/2605.09965v2'>PDF</a>
+      <a class='publication-btn' href='https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games'>Project</a>
+    </div>
+    <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+  </div>
+</div>
 
 <div class='paper-box'>
   <div class='paper-box-image'>
