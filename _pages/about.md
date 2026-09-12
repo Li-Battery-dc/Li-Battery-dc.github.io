@@ -1,115 +1,77 @@
 ---
+layout: research
 permalink: /
-title: ""
-excerpt: ""
-author_profile: true
-redirect_from: 
+title: "Dongchen Liu"
+excerpt: "Artificial intelligence undergraduate at Tsinghua University. Research in spatial intelligence, machine learning, and computer vision."
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+{% include research-hero.html %}
 
-<span class='anchor' id='about-me'></span>
-# 😀About Me
+<section markdown="1" class="content-section" id="news" aria-labelledby="heading-news">
+  <div class="section-heading"><span class="section-index">01</span><h2 id="heading-news">News</h2></div>
+  <div class="section-body" markdown="1">
 
-Hello! I'm Dongchen Liu. I'm currently a third-year undergraduate student at Tsinghua University, majoring in Artificial Intelligence.
+{% include research-news.html %}
 
-My research interest includes spatial intelligence, machine learning and computer vision. (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=tHxnJqcAAAAJ&hl=en&authuser=1'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
-
-<span class='anchor' id='educations'></span>
-# 📖 Educations
-- *2023 - now*, Department of Automation, Tsinghua University(Expected: Jun 2027)
-
-<span class='anchor' id='news'></span>
-# 🔥 News
-- *2026.05*: &nbsp; 🎉🎉 Our work on Large Foundation Models and Games is on arXiv now!
-- *2026.05*: &nbsp; 🎉🎉 My first publication GameVerse is accepted by ICML 2026!
-
-<span class='anchor' id='publications'></span>
-# 📝 Publications
-
-<div class='paper-box'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge">arXiv</div>
-      <img src='images/papers/survey.png' alt="LFMs Meet games paper preview">
-    </div>
-  </div>
-  <div class='paper-box-text'>
-    <div class='publication-title'>Towards Generalist Game Players: An Investigation of Foundation Models in the Game Multiverse</div>
-    <div class='publication-authors'>
-      Kuan Zhang*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao*, Tianyu Xin*, Yue Su*, Haisheng Wang, Han Yin, Hongbo Ma, Peize Li, Tianjun Gu, Xiangnan Wu, Xinran Zhang, Yongxuan Li, Zirong Chen, Yiming Li<sup>†</sup>
-    </div>
-    <div class='publication-links'>
-      <a class='publication-btn' href='https://arxiv.org/abs/2605.09965v2'>PDF</a>
-      <a class='publication-btn' href='https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games'>Project</a>
-    </div>
-    <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-  </div>
 </div>
+</section>
+<section markdown="1" class="content-section" id="publications" aria-labelledby="heading-publications">
+  <div class="section-heading"><span class="section-index">02</span><h2 id="heading-publications">Publications</h2></div>
+  <div class="section-body" markdown="1">
 
-<div class='paper-box'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge">ICML 2026</div>
-      <img src='images/papers/GameVerse.png' alt="GameVerse paper preview">
-    </div>
-  </div>
-  <div class='paper-box-text'>
-    <div class='publication-title'>GameVerse: Can Vision-Language Models Learn from Video-based Reflection?</div>
-    <div class='publication-authors'>
-      Kuan Zhang*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, Miao Liu<sup>†</sup>, Yiming Li<sup>†</sup>
-    </div>
-    <div class='publication-links'>
-      <a class='publication-btn' href='https://arxiv.org/abs/2603.06656'>PDF</a>
-      <a class='publication-btn' href='https://github.com/THUSI-Lab/GameVerse'>Code</a>
-      <a class='publication-btn' href='https://GameVerse-bench.github.io'>Project</a>
-    </div>
-    <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-  </div>
+{% include research-publications.html %}
+
 </div>
+</section>
+<section markdown="1" class="content-section" id="honors-and-awards" aria-labelledby="heading-honors-and-awards">
+  <div class="section-heading"><span class="section-index">03</span><h2 id="heading-honors-and-awards">Honors & Awards</h2></div>
+  <div class="section-body" markdown="1">
 
-<span class='anchor' id='honors-and-awards'></span>
-# 🎖 Honors and Awards
-
-## 2025
+### 2025
 
 - National Encouragement Scholarship
 - Comprehensive Excellence Scholarship, Tsinghua University.
 
-## 2024
+### 2024
 
 - National Encouragement Scholarship
 - Comprehensive Excellence Scholarship, Tsinghua University.
 
-## 2023
+### 2023
 
 - Runqian Huang Scholarship, Qujing No.1 Middle school.
 
-<span class='anchor' id='projects'></span>
-# 🔨 Projects
+</div>
+</section>
+<section markdown="1" class="content-section" id="projects" aria-labelledby="heading-projects">
+  <div class="section-heading"><span class="section-index">04</span><h2 id="heading-projects">Projects</h2></div>
+  <div class="section-body" markdown="1">
 
-## Freshmen Creative Competition, Tsinghua University.
+### Freshmen Creative Competition, Tsinghua University.
 
 - As the team leader, completed the two projects of "Guided Photography Assistant" and "Bicycle Parking Management System".
 - Awarded the 1st place of the large model track and the 2nd place of the campus optimization track respectively.
 
-## The 4th Tsinghua University Cyberdog Development Competition.
+### The 4th Tsinghua University Cyberdog Development Competition.
 
 - Implemented cooperative soccer offense/defense for two quadruped robots based on ROS 2.
 - Awarded Third Prize (ranked 8/19).
 
-## THUAI 7, Tsinghua University.
+### THUAI 7, Tsinghua University.
 
 - Wrote the C++ codebase for an agent in a competitive game environment.
 - Awarded Second Prize (ranked 3/34).
 
-<span class='anchor' id='society'></span>
-# 🤵 Society
+</div>
+</section>
+<section markdown="1" class="content-section" id="society" aria-labelledby="heading-society">
+  <div class="section-heading"><span class="section-index">05</span><h2 id="heading-society">Service</h2></div>
+  <div class="section-body" markdown="1">
 
 - Staff Member, Software Section, Student Association for Science and Technology, Department of Automation, Tsinghua University (2024–2025)
+
+</div>
+</section>

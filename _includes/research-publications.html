@@ -1,0 +1,15 @@
+<div class="publication-grid">
+{% for paper in site.data.publications %}
+<article class="paper-box" aria-labelledby="paper-title-{{ forloop.index }}">
+  <div class="paper-cover">
+    <img src="{{ paper.image | relative_url }}" alt="{{ paper.alt | escape }}" loading="lazy" width="760" height="460">
+  </div>
+  <div class="paper-box-text">
+    <p class="publication-meta"><span class="publication-venue">{{ paper.venue }}</span><span>{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span></p>
+    <h3 class="publication-title" id="paper-title-{{ forloop.index }}"><a href="{{ paper.links.first.url }}">{{ paper.title }}</a></h3>
+    <div class="publication-authors">{{ paper.authors }}</div>
+    <div class="publication-links">{% for link in paper.links %}<a class="publication-btn" href="{{ link.url }}" aria-label="{{ link.label }}: {{ paper.title | escape }}">{{ link.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</div>
+  </div>
+</article>
+{% endfor %}
+</div>

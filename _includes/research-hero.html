@@ -1,0 +1,28 @@
+<section class="research-hero" id="about-me" aria-labelledby="profile-name">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ site.data.profile.role }} <span>·</span> {{ site.data.profile.affiliation }}</p>
+    <h1 id="profile-name">{{ site.author.name }}</h1>
+    <div class="hero-bio">{{ site.data.profile.introduction | markdownify }}</div>
+    <p class="research-interests"><span>Research interests</span>{{ site.data.profile.interests | join: ' · ' }}</p>
+    <section class="hero-education" id="educations" aria-labelledby="heading-educations">
+      <h2 id="heading-educations">Education</h2>
+      {% for education in site.data.profile.education %}
+      <div class="education-entry">
+        <div><h3>{{ education.institution }}</h3><p>{{ education.department }}<br>{{ education.program }}</p></div>
+        <p class="education-date">{{ education.period }}<span>{{ education.graduation }}</span></p>
+      </div>
+      {% endfor %}
+    </section>
+    <div class="profile-links" aria-label="Academic profiles and contact">
+      <a href="{{ site.author.googlescholar }}">Google Scholar <span>↗</span></a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub <span>↗</span></a>
+      <a href="{{ site.author.openreview }}">OpenReview <span>↗</span></a>
+      <a href="mailto:{{ site.author.email }}">Email <span>↗</span></a>
+    </div>
+  </div>
+  <figure class="hero-portrait">
+    <img src="{{ site.author.avatar | relative_url }}" alt="Portrait of {{ site.author.name }}" width="1579" height="1548" fetchpriority="high">
+    <figcaption><span>{{ site.author.location }}</span><span>Personal homepage</span></figcaption>
+  </figure>
+  {% include spatial-header.html %}
+</section>

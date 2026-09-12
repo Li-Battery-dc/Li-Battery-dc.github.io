@@ -1,0 +1,23 @@
+# Add publications at the top. Authors support HTML.
+- title: "Towards Generalist Game Players: An Investigation of Foundation Models in the Game Multiverse"
+  venue: "arXiv"
+  image: "images/papers/Survey.png"
+  alt: "LFMs Meet games paper preview"
+  authors: "Kuan Zhang*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao*, Tianyu Xin*, Yue Su*, Haisheng Wang, Han Yin, Hongbo Ma, Peize Li, Tianjun Gu, Xiangnan Wu, Xinran Zhang, Yongxuan Li, Zirong Chen, Yiming Li<sup>†</sup>"
+  links:
+    - label: PDF
+      url: "https://arxiv.org/abs/2605.09965v2"
+    - label: Project
+      url: "https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games"
+- title: "GameVerse: Can Vision-Language Models Learn from Video-based Reflection?"
+  venue: "ICML 2026"
+  image: "images/papers/GameVerse.png"
+  alt: "GameVerse paper preview"
+  authors: "Kuan Zhang*, <span class='author-self'>Dongchen Liu</span>*, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, Miao Liu<sup>†</sup>, Yiming Li<sup>†</sup>"
+  links:
+    - label: PDF
+      url: "https://arxiv.org/abs/2603.06656"
+    - label: Code
+      url: "https://github.com/THUSI-Lab/GameVerse"
+    - label: Project
+      url: "https://GameVerse-bench.github.io"

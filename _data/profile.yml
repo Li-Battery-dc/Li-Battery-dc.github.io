@@ -1,0 +1,18 @@
+# Homepage content. Social links and portrait remain in _config.yml.
+# 3D header: gate or mobius. No visitor-facing model selector.
+spatial_model: gate
+role: Undergraduate student
+affiliation: Tsinghua University
+introduction: >-
+  I'm a third-year undergraduate at **Tsinghua University**,
+  majoring in **Artificial Intelligence** in the Department of Automation.
+interests:
+  - Spatial intelligence
+  - Machine learning
+  - Computer vision
+education:
+  - institution: Tsinghua University
+    department: Department of Automation
+    program: Artificial Intelligence · Undergraduate
+    period: 2023 – present
+    graduation: Expected graduation · June 2027

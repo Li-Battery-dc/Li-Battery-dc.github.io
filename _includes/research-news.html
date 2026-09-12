@@ -1,0 +1,5 @@
+<ul class="news-list">
+{% for item in site.data.news %}
+  <li><time datetime="{{ item.date | replace: '.', '-' }}">{{ item.date }}</time><div>{{ item.text | markdownify }}</div></li>
+{% endfor %}
+</ul>
