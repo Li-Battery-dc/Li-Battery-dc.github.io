@@ -3,16 +3,27 @@
 spatial_model: gate
 role: Undergraduate student
 affiliation: Tsinghua University
-introduction: >-
-  I'm a third-year undergraduate at **Tsinghua University**,
-  majoring in **Artificial Intelligence** in the Department of Automation.
+introduction: |-
+  I’m currently a final-year undergraduate in the Department of Automation at Tsinghua University, where I am a member of the Class of General Artificial Intelligence.
+  
+  I will begin my master’s studies at Tsinghua Shenzhen International Graduate School in September 2027, and glad to be supervised by Prof. [Yansong Tang](https://andytang15.github.io/).
+
+  During my undergraduate research, I have been fortunate to work with Prof. [Yiming Li](https://yimingli-page.github.io/) in the [College of AI](https://collegeai.tsinghua.edu.cn/en/People/Full_time_PI/Yiming_Li.htm) at Tsinghua University on game agents and 3D reconstruction.
 interests:
-  - Spatial intelligence
-  - Machine learning
-  - Computer vision
+  - Multimodal learning
+  - Game agents
+  - Robotics
 education:
+  - institution: Tsinghua University, Shenzhen International Graduate School
+    department: Electronic Information · Incoming master's student
+    program: Large Foundation Model Science and Engineering
+    period: September 2027 – June 2029 (expected)
+    # details:
+    #   - "Large Foundation Model Science and Engineering · Joint training with Tencent"
+    #   - "Supervisor: Prof. [Yansong Tang](https://andytang15.github.io/)"
   - institution: Tsinghua University
     department: Department of Automation
-    program: Artificial Intelligence · Undergraduate
-    period: 2023 – present
-    graduation: Expected graduation · June 2027
+    # program: Artificial Intelligence · Undergraduate
+    period: September 2023 – June 2027 (expected)
+    # details:
+    #   - "Class of General Artificial Intelligence"

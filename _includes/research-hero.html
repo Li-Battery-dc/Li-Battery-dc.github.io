@@ -8,7 +8,11 @@
       <h2 id="heading-educations">Education</h2>
       {% for education in site.data.profile.education %}
       <div class="education-entry">
-        <div><h3>{{ education.institution }}</h3><p>{{ education.department }}<br>{{ education.program }}</p></div>
+        <div class="education-description">
+          <h3>{{ education.institution }}</h3>
+          <p>{{ education.department }}<br>{{ education.program }}</p>
+          {% for detail in education.details %}<div class="education-detail">{{ detail | markdownify }}</div>{% endfor %}
+        </div>
         <p class="education-date">{{ education.period }}<span>{{ education.graduation }}</span></p>
       </div>
       {% endfor %}

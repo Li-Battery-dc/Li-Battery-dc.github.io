@@ -2,7 +2,7 @@
 layout: research
 permalink: /
 title: "Dongchen Liu"
-excerpt: "Artificial intelligence undergraduate at Tsinghua University. Research in spatial intelligence, machine learning, and computer vision."
+excerpt: "Final-year undergraduate at Tsinghua University and incoming master's student at Tsinghua Shenzhen International Graduate School. Research interests in multimodal learning, game agents, and robotics."
 author_profile: false
 redirect_from:
   - /about/

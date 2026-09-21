@@ -7,5 +7,6 @@ main:
     url: "/#educations"
   - title: "Projects"
     url: "/#projects"
-  - title: "Blog ↗"
-    url: "/blog_root/"
+  # Temporarily hidden. Uncomment these two lines to restore the Blog entry.
+  # - title: "Blog ↗"
+  #   url: "/blog_root/"
